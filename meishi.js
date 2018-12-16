@@ -1,22 +1,26 @@
 function getDepartment(){
 	//部署取得
 	var department = document.getElementById("department").value;
-	console.log(department);
+	var rd = document.getElementById("resultDepartment");
+	rd.innerHTML = department;
 }
 function getTeam(){
 	//所属取得
 	var team = document.getElementById("team").value;
-	console.log(team);
+	var rt = document.getElementById("resultTeam");
+	rt.innerHTML = team;
 }
 function getName(){
 	//氏名取得
 	var name = document.getElementById("name").value;
-	console.log(name);
+	var rn = document.getElementById("resultName");
+	rn.innerHTML = name;
 }
 function getAddress(){
 	//アドレス取得
 	var address = document.getElementById("address").value;
-	console.log(address);
+	var ra = document.getElementById("resultAddress");
+	ra.innerHTML = address;
 }
 function viewData(){
 	//取得したものをviewに表示
