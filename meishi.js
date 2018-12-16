@@ -23,7 +23,7 @@ function getAddress(){
 	ra.innerHTML = address;
 }
 function viewData(){
-	//取得したものをviewに表示
+	//取得したものを表示
 	getDepartment();
 	getTeam();
 	getName();
