@@ -30,21 +30,20 @@
 				<form>
 					<div>
 						<label for="department">部署:</label>
-						<input type="text" id="department" name="user_department">
+						<input type="text" id="department" name="user_department" onKeyUp="getDepartment()">
 					</div>
 					<div>
 						<label for="team">所属:</label>
-						<input type="text" id="team" name="user_team">
+						<input type="text" id="team" name="user_team" onKeyUp="getTeam()">
 					</div>
 					<div>
 						<label for="nema">氏名:</label>
-						<input type="text" id="name" name="user_name">
+						<input type="text" id="name" name="user_name" onKeyUp="getName()">
 					</div>
 					<div>
 						<label for="address">mail:</label>
-						<input type="text" id="address" name="user_address">
+						<input type="text" id="address" name="user_address" onKeyUp="getAddress()">
 					</div>
-					<input type="button" value="post" id="post_data" onclick="viewData()">
 				</form>
 				<div class="content__inner_view">
 					<div class="content__inner_view_head">
