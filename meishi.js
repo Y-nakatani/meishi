@@ -23,9 +23,11 @@ function getAddress(){
 	ra.innerHTML = address;
 }
 function viewData(){
-	//取得したものを表示
-	getDepartment();
-	getTeam();
-	getName();
-	getAddress();
+	var datalist = {
+		data1: "department",
+		data2: "team",
+		data3: "name",
+		data4: "address"
+	}
+	console.log(datalist);
 }
