@@ -12,7 +12,7 @@ function getTeam(){
 }
 function getName(){
 	//氏名取得
-	var name = document.getElementById("name").value;
+	var name = document.getElementById("userName").value;
 	var rn = document.getElementById("resultName");
 	rn.innerHTML = name;
 }
@@ -23,11 +23,9 @@ function getAddress(){
 	ra.innerHTML = address;
 }
 function viewData(){
-	var datalist = {
-		data1: "department",
-		data2: "team",
-		data3: "name",
-		data4: "address"
-	}
-	console.log(datalist);
+	localStorage.setItem("datalist1", department.value);
+	localStorage.setITem("datalist2", team.value);
+	localStorage.setITem("datalist3", userName.value);
+	localStorage.setItem("datalist4", address.value);
+	console.log(department.value, team.value, userName.value, address.value);
 }
