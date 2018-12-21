@@ -23,9 +23,12 @@ function getAddress(){
 	ra.innerHTML = address;
 }
 function viewData(){
-	localStorage.setItem("datalist1", department.value);
-	localStorage.setITem("datalist2", team.value);
-	localStorage.setITem("datalist3", userName.value);
-	localStorage.setItem("datalist4", address.value);
+	var datalist = {
+		data1: department.value, 
+		data2: team.value, 
+		data3: userName.value,
+		data4: address.value,
+	}
+	localStorage.setItem("datalist", JSON.stringify(datalist));
 	console.log(department.value, team.value, userName.value, address.value);
 }

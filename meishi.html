@@ -5,6 +5,15 @@
 		<script src="./meishi.js"></script>
 		<style type="text/css">
 		<!--
+			.save_button{
+				margin: 10px 0;
+				display: inline-block;
+   			padding: 3px 30px;
+				text-decoration: none;
+				background: #f7f7f7;
+				color: #ff7c5c;/*文字色*/
+				font-weight: bold;
+			}
 			.content__inner_view{
 				width: 300px;
 				height: 450px;
@@ -45,7 +54,7 @@
 						<input type="text" id="address" name="user_address" onKeyUp="getAddress()">
 					</div>
 				</form>
-				<input type="button" value="保存" onclick="viewData()">
+				<input class="save_button" type="button" value="保存" onclick="viewData()">
 				<div class="content__inner_view">
 					<div class="content__inner_view_head">
 						<p>Hyper株式会社</p>
