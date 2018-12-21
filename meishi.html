@@ -14,6 +14,15 @@
 				color: #ff7c5c;/*文字色*/
 				font-weight: bold;
 			}
+			.content__inner{
+				display: flex;
+			}
+			.content__inner_col1{
+				width: 500px;
+			}
+			.content__inner_col2{
+				flex: 1;
+			}
 			.content__inner_view{
 				width: 300px;
 				height: 450px;
@@ -36,50 +45,54 @@
 	<body>
 		<div class="content">
 			<div class="content__inner">
-				<form>
-					<div>
-						<label for="department">部署:</label>
-						<input type="text" id="department" name="user_department" onKeyUp="getDepartment()">
-					</div>
-					<div>
-						<label for="team">所属:</label>
-						<input type="text" id="team" name="user_team" onKeyUp="getTeam()">
-					</div>
-					<div>
-						<label for="userName">氏名:</label>
-						<input type="text" id="userName" name="user_name" onKeyUp="getName()">
-					</div>
-					<div>
-						<label for="address">mail:</label>
-						<input type="text" id="address" name="user_address" onKeyUp="getAddress()">
-					</div>
-				</form>
-				<input class="save_button" type="button" value="保存" onclick="viewData()">
-				<div class="content__inner_view">
-					<div class="content__inner_view_head">
-						<p>Hyper株式会社</p>
-					</div>
-					<div class="content__inner_view_middle">
-						<div id="resultDepartment">
-							[部署]
+				<div class="content__inner_col1">
+					<form>
+						<div>
+							<label for="department">部署:</label>
+							<input type="text" id="department" name="user_department" onKeyUp="getDepartment()">
 						</div>
-						<div id="resultTeam">
-							[所属]
+						<div>
+							<label for="team">所属:</label>
+							<input type="text" id="team" name="user_team" onKeyUp="getTeam()">
 						</div>
-						<div id="resultName">
-							[名前]
+						<div>
+							<label for="userName">氏名:</label>
+							<input type="text" id="userName" name="user_name" onKeyUp="getName()">
 						</div>
-						<div id="resultAddress">
-							[mail]
+						<div>
+							<label for="address">mail:</label>
+							<input type="text" id="address" name="user_address" onKeyUp="getAddress()">
 						</div>
-					</div>
-					<div class="content__inner_view_bottom">
-						<p>Hyper株式会社<br>
-							123-4567<br>
-							東京都馬瀬区蕎麦町9-111<br>
-							拉麺ビル 10階</p>
+					</form>
+					<input class="save_button" type="button" value="保存" onclick="viewData()">
+					<div class="content__inner_view">
+						<div class="content__inner_view_head">
+							<p>Hyper株式会社</p>
+						</div>
+						<div class="content__inner_view_middle">
+							<div id="resultDepartment">
+								[部署]
+							</div>
+							<div id="resultTeam">
+								[所属]
+							</div>
+							<div id="resultName">
+								[名前]
+							</div>
+							<div id="resultAddress">
+								[mail]
+							</div>
+						</div>
+						<div class="content__inner_view_bottom">
+							<p>Hyper株式会社<br>
+								123-4567<br>
+								東京都馬瀬区蕎麦町9-111<br>
+								拉麺ビル 10階</p>
+						</div>
 					</div>
 				</div>
+			<div class="content__inner_col2" id="rightcontent">
+				ここにdataを表示
 			</div>
 		</div>
 	</body>

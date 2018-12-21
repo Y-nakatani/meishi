@@ -30,5 +30,8 @@ function viewData(){
 		data4: address.value,
 	}
 	localStorage.setItem("datalist", JSON.stringify(datalist));
+	var dataViewContent = document.getElementById("rightcontent");
+	JSON.parse(localStorage.getItem("datalist"))
+	dataViewContent.innerHTML = datalist;
 	console.log(department.value, team.value, userName.value, address.value);
 }
