@@ -23,15 +23,16 @@ function getAddress(){
 	ra.innerHTML = address;
 }
 function viewData(){
-	var datalist = {
-		data1: department.value, 
-		data2: team.value, 
-		data3: userName.value,
-		data4: address.value,
-	}
-	localStorage.setItem("datalist", JSON.stringify(datalist));
+	var str = JSON.stringify({
+		"部署": department.value,
+		"所属": team.value,
+		"氏名": userName.value,
+		"mail": address.value,
+	});
+	localStorage.setItem("key", str);
 	var dataViewContent = document.getElementById("rightcontent");
-	JSON.parse(localStorage.getItem("datalist"))
-	dataViewContent.innerHTML = datalist;
+	var tmp = localStorage.getItem("key");
+	var obj = JSON.parse(tmp);
+	dataViewContent.innerHTML = tmp;
 	console.log(department.value, team.value, userName.value, address.value);
 }
