@@ -30,9 +30,9 @@ function viewData(){
 		"mail": address.value,
 	});
 	localStorage.setItem("key", str);
-	var dataViewContent = document.getElementById("rightcontent");
+	var dataViewContent = document.getElementById("data1");
 	var tmp = localStorage.getItem("key");
 	var obj = JSON.parse(tmp);
-	dataViewContent.innerHTML = tmp;
+	dataViewContent.innerHTML = "<div> data1:" + tmp + "</div>";
 	console.log(department.value, team.value, userName.value, address.value);
 }
