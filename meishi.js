@@ -33,6 +33,9 @@ function viewData(){
 	var dataViewContent = document.getElementById("data1");
 	var tmp = localStorage.getItem("key");
 	var obj = JSON.parse(tmp);
-	dataViewContent.innerHTML = "<div> data1:" + tmp + "</div>";
+	dataViewContent.innerHTML = "<div class='col2__inner_data' onclick='popData()'> data1:"+ tmp + "</div>";
 	console.log(department.value, team.value, userName.value, address.value);
+}
+function popData(){
+	console.log("ok");
 }
