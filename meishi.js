@@ -22,20 +22,28 @@ function getAddress(){
 	var ra = document.getElementById("resultAddress");
 	ra.innerHTML = address;
 }
-function viewData(){
+function viewData(count){
 	var str = JSON.stringify({
 		"部署": department.value,
 		"所属": team.value,
 		"氏名": userName.value,
 		"mail": address.value,
 	});
+	//todo: クリックされるたびにユニークkeyが設定される
 	localStorage.setItem("key", str);
 	var dataViewContent = document.getElementById("data1");
 	var tmp = localStorage.getItem("key");
 	var obj = JSON.parse(tmp);
-	dataViewContent.innerHTML = "<div class='col2__inner_data' onclick='popData()'> data1:"+ tmp + "</div>";
+	for (let i = 0; i<localStorage.length; i++){
+		dataViewContent.innerHTML = "<div class='col2__inner_data' onclick='popData()'> data1:"+ tmp + "</div>";
+	}
+	console.log(localStorage.length);
 	console.log(department.value, team.value, userName.value, address.value);
 }
 function popData(){
 	console.log("ok");
+}
+function countUp(countUpValue){
+	var countUpValue = 0;
+	return countUpValue++;
 }
