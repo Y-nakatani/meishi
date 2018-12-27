@@ -47,3 +47,12 @@ function countUp(countUpValue){
   var countUpValue = 0;
   return countUpValue++;
 }
+function setKey(){
+  //ユニークキー発行
+}
+function setLocalStorage(){
+  //ユニークキー発行後ローカルに保存
+}
+function getData(){
+  //ユニークキーでgetItem, jsonに変換
+}
